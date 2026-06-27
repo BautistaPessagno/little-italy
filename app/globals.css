@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-crema: #f7f1e3;
+  --color-crema-soft: #fbf7ee;
+  --color-tinta: #20211c;
+  --color-albahaca: #2f5d3a;
+  --color-albahaca-claro: #4f8b5a;
+  --color-tomate: #c0392b;
+  --color-oliva: #8a8b5c;
+
+  --font-display: ui-serif, "Georgia", "Times New Roman", serif;
+  --font-body: ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-crema);
+  color: var(--color-tinta);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Signature element: a hand-drawn pasta swirl divider */
+.swirl-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--color-albahaca) 35%, transparent),
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
